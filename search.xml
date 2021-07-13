@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>ctfshow web入门 信息搜集</title>
+      <link href="/2021/07/13/ctfshow-web-ru-men-xin-xi-sou-ji/"/>
+      <url>/2021/07/13/ctfshow-web-ru-men-xin-xi-sou-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="web1"><a href="#web1" class="headerlink" title="web1"></a>web1</h2><p>进去按F12</p><h2 id="web2"><a href="#web2" class="headerlink" title="web2"></a>web2</h2><p>进去CTRL+shift+C或者加上view-source:</p><h2 id="web3"><a href="#web3" class="headerlink" title="web3"></a>web3</h2><p>抓包后返回头里有flag</p><h2 id="web4"><a href="#web4" class="headerlink" title="web4"></a>web4</h2><p>playload<code>/robots.txt</code>然后获得<code>/flagishere.txt</code> ，playload <code>/flagishere.txt</code>即可获得flag</p><h2 id="web5"><a href="#web5" class="headerlink" title="web5"></a>web5</h2><p>playload <code>/index.phps</code>得到文件打开后就有flag</p><h2 id="web6"><a href="#web6" class="headerlink" title="web6"></a>web6</h2><p>playload <code>/www.zip</code>得到文件后获得提示，访问/fl000g.txt</p><h2 id="web7"><a href="#web7" class="headerlink" title="web7"></a>web7</h2><p>git代码泄露，访问/.git/index.php</p><h2 id="web8"><a href="#web8" class="headerlink" title="web8"></a>web8</h2><p>svn代码泄露，访问/.svn/</p><h2 id="web9"><a href="#web9" class="headerlink" title="web9"></a>web9</h2><p>考察vim缓存信息泄露，直接访问url/.index.php.swp </p><h2 id="web10"><a href="#web10" class="headerlink" title="web10"></a>web10</h2><p>抓包看cookie</p><h2 id="web11"><a href="#web11" class="headerlink" title="web11"></a>web11</h2><p>通过dns检查查询flag <a href="https://zijian.aliyun.com/">https://zijian.aliyun.com/</a> TXT 记录，一般指为某个主机名或域名设置的说明。</p><h2 id="web12"><a href="#web12" class="headerlink" title="web12"></a>web12</h2><p>访问/robots.txt得到/admin/，账号为admin，密码在页面最下面</p><h2 id="web13"><a href="#web13" class="headerlink" title="web13"></a>web13</h2><p>下载最下面的技术文档，得到后台地址和账号密码，登陆后得到flag</p><h2 id="web14"><a href="#web14" class="headerlink" title="web14"></a>web14</h2><p>无</p><h2 id="web15"><a href="#web15" class="headerlink" title="web15"></a>web15</h2><p>访问/admin,忘记密码，密保西安，重置</p><h2 id="web16"><a href="#web16" class="headerlink" title="web16"></a>web16</h2><p>访问/tz.php，进去后点击phpinfo获得flag</p><h2 id="web17"><a href="#web17" class="headerlink" title="web17"></a>web17</h2><p>ping <a href="http://www.ctfshow.com/">www.ctfshow.com</a></p><h2 id="web18"><a href="#web18" class="headerlink" title="web18"></a>web18</h2><p>查看js通关的条件，得到一个网址，然后访问110.php</p><h2 id="web19"><a href="#web19" class="headerlink" title="web19"></a>web19</h2><p>F12查看以后，直接post发送账号密码</p><h2 id="web20"><a href="#web20" class="headerlink" title="web20"></a>web20</h2><p>直接访问/db/db.mdb后得到下载文件，然后直接打开</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+            <tag> WEB </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Eakal,粟师傅yyds</title>
       <link href="/2021/07/12/eakal-yyds/"/>
       <url>/2021/07/12/eakal-yyds/</url>
