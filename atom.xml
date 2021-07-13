@@ -6,7 +6,7 @@
   <link href="https://rolemee.com/atom.xml" rel="self"/>
   
   <link href="https://rolemee.com/"/>
-  <updated>2021-07-13T03:34:10.194Z</updated>
+  <updated>2021-07-13T03:37:03.748Z</updated>
   <id>https://rolemee.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ctfshow-web入门-爆破</title>
+    <link href="https://rolemee.com/2021/07/13/ctfshow-web-ru-men-bao-po/"/>
+    <id>https://rolemee.com/2021/07/13/ctfshow-web-ru-men-bao-po/</id>
+    <published>2021-07-13T03:36:23.000Z</published>
+    <updated>2021-07-13T03:37:03.748Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;7-5日web题解&quot;&gt;&lt;a href=&quot;#7-5日web题解&quot; class=&quot;headerlink&quot; title=&quot;7.5日web题解&quot;&gt;&lt;/a&gt;7.5日web题解&lt;/h1&gt;&lt;h2 id=&quot;web21&quot;&gt;&lt;a href=&quot;#web21&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Markdown" scheme="https://rolemee.com/tags/Markdown/"/>
+    
+    <category term="WEB" scheme="https://rolemee.com/tags/WEB/"/>
+    
+  </entry>
   
   <entry>
     <title>ctfshow web入门 信息搜集</title>
