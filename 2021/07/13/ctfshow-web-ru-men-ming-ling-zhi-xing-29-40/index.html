@@ -308,6 +308,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -485,6 +498,11 @@
                 </div>
                 
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    7 分
+                </div>
                 
 
                 
@@ -888,7 +906,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rolemee.com/2021/07/13/ctfshow-web-ru-men-ming-ling-zhi-xing/">https://rolemee.com/2021/07/13/ctfshow-web-ru-men-ming-ling-zhi-xing/</a>
+                    <a href="https://rolemee.com/2021/07/13/ctfshow-web-ru-men-ming-ling-zhi-xing-29-40/">https://rolemee.com/2021/07/13/ctfshow-web-ru-men-ming-ling-zhi-xing-29-40/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1103,18 +1121,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/07/13/ctfshow-web-ru-men-ming-ling-zhi-xing/">
+                <a href="/2021/07/14/ctfshow-web-ru-men-ming-ling-zhi-xing-41-50/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="ctfshow-web入门-命令执行">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="ctfshow-web入门-命令执行 41-50">
                         
-                        <span class="card-title">ctfshow-web入门-命令执行</span>
+                        <span class="card-title">ctfshow-web入门-命令执行 41-50</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1124,9 +1141,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-13
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1139,7 +1156,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1404,6 +1420,9 @@
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">3.7k</span>
             
             
             
