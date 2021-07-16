@@ -6,7 +6,7 @@
   <link href="https://rolemee.com/atom.xml" rel="self"/>
   
   <link href="https://rolemee.com/"/>
-  <updated>2021-07-15T13:37:13.069Z</updated>
+  <updated>2021-07-16T08:38:22.055Z</updated>
   <id>https://rolemee.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ctfshow-web入门-命令执行-58-71</title>
+    <link href="https://rolemee.com/2021/07/16/ctfshow-web-ru-men-ming-ling-zhi-xing-58-71/"/>
+    <id>https://rolemee.com/2021/07/16/ctfshow-web-ru-men-ming-ling-zhi-xing-58-71/</id>
+    <published>2021-07-16T08:38:01.000Z</published>
+    <updated>2021-07-16T08:38:22.055Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre&gt;&lt;code&gt;## web58
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;line-numbers language-php&quot; data-language=&quot;php&quot;&gt;&lt;code class=&quot;language-php&quot;&gt;&lt;span class=&quot;token</summary>
+        
+      
+    
+    
+    
+    <category term="ctfshow" scheme="https://rolemee.com/categories/ctfshow/"/>
+    
+    
+    <category term="WEB" scheme="https://rolemee.com/tags/WEB/"/>
+    
+    <category term="WEB入门" scheme="https://rolemee.com/tags/WEB%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>ctfshow-web入门-命令执行-55-57</title>

