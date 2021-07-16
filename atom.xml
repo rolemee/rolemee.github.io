@@ -6,7 +6,7 @@
   <link href="https://rolemee.com/atom.xml" rel="self"/>
   
   <link href="https://rolemee.com/"/>
-  <updated>2021-07-16T08:40:31.174Z</updated>
+  <updated>2021-07-16T12:59:49.965Z</updated>
   <id>https://rolemee.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ctfshow-web入门-命令执行-72(绕过disable_function限制和open_basedir限制)</title>
+    <link href="https://rolemee.com/2021/07/16/ctfshow-web-ru-men-ming-ling-zhi-xing-72-rao-guo-disable-function-xian-zhi-he-open-basedir-xian-zhi/"/>
+    <id>https://rolemee.com/2021/07/16/ctfshow-web-ru-men-ming-ling-zhi-xing-72-rao-guo-disable-function-xian-zhi-he-open-basedir-xian-zhi/</id>
+    <published>2021-07-16T12:58:34.000Z</published>
+    <updated>2021-07-16T12:59:49.965Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;web72&quot;&gt;&lt;a href=&quot;#web72&quot; class=&quot;headerlink&quot; title=&quot;web72&quot;&gt;&lt;/a&gt;web72&lt;/h2&gt;&lt;p&gt;绕过disable_function限制和open_basedir限制&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="ctfshow" scheme="https://rolemee.com/categories/ctfshow/"/>
+    
+    
+    <category term="WEB" scheme="https://rolemee.com/tags/WEB/"/>
+    
+    <category term="WEB入门" scheme="https://rolemee.com/tags/WEB%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="脚本" scheme="https://rolemee.com/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>web注意事项</title>
