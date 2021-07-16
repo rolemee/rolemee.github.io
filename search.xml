@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>web注意事项</title>
+      <link href="/2021/07/16/web-zhu-yi-shi-xiang/"/>
+      <url>/2021/07/16/web-zhu-yi-shi-xiang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="web注意事项"><a href="#web注意事项" class="headerlink" title="web注意事项"></a>web注意事项</h1><h2 id="以下字符需要编码以后才能get或者post-转自https-blog-csdn-net-u014231523-article-details-48519499"><a href="#以下字符需要编码以后才能get或者post-转自https-blog-csdn-net-u014231523-article-details-48519499" class="headerlink" title="以下字符需要编码以后才能get或者post(转自https://blog.csdn.net/u014231523/article/details/48519499)"></a>以下字符需要编码以后才能get或者post(转自<a href="https://blog.csdn.net/u014231523/article/details/48519499">https://blog.csdn.net/u014231523/article/details/48519499</a>)</h2><ul><li>“+” url中+号的表示空格 转化 %2B</li></ul><ul><li><p>“/” 用来分割目录和子目录 转化 %2F</p></li><li><p>“?” 用来分割请求的url和参数 转化 %3F</p></li><li><p>“%” 用来指定特殊字符 转化 %25</p></li><li><p>“#” 用来表示书签 转化 %23</p></li><li><p>“&amp;” 用来表示url中指定的参数间的分割符 转化%26</p></li><li><p>“=” 用来表示url中指定的参数的值 转化 %3D</p></li><li><p>“” url中的空格可以用+号或编码 转化%20</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> web学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> WEB </tag>
+            
+            <tag> WEB注意事项 </tag>
+            
+            <tag> 学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ctfshow-web入门-命令执行-58-71</title>
       <link href="/2021/07/16/ctfshow-web-ru-men-ming-ling-zhi-xing-58-71/"/>
       <url>/2021/07/16/ctfshow-web-ru-men-ming-ling-zhi-xing-58-71/</url>
