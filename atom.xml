@@ -6,7 +6,7 @@
   <link href="https://rolemee.com/atom.xml" rel="self"/>
   
   <link href="https://rolemee.com/"/>
-  <updated>2021-07-16T12:59:49.965Z</updated>
+  <updated>2021-07-17T14:14:34.438Z</updated>
   <id>https://rolemee.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ctfshow-web入门-命令执行-53-77</title>
+    <link href="https://rolemee.com/2021/07/17/ctfshow-web-ru-men-ming-ling-zhi-xing-73-77/"/>
+    <id>https://rolemee.com/2021/07/17/ctfshow-web-ru-men-ming-ling-zhi-xing-73-77/</id>
+    <published>2021-07-17T14:13:42.000Z</published>
+    <updated>2021-07-17T14:14:34.438Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;web73-74&quot;&gt;&lt;a href=&quot;#web73-74&quot; class=&quot;headerlink&quot; title=&quot;web73-74&quot;&gt;&lt;/a&gt;web73-74&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-php&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="ctfshow" scheme="https://rolemee.com/categories/ctfshow/"/>
+    
+    
+    <category term="WEB" scheme="https://rolemee.com/tags/WEB/"/>
+    
+    <category term="WEB入门" scheme="https://rolemee.com/tags/WEB%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="脚本" scheme="https://rolemee.com/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>ctfshow-web入门-命令执行-72(绕过disable_function限制和open_basedir限制)</title>
