@@ -6,7 +6,7 @@
   <link href="https://rolemee.com/atom.xml" rel="self"/>
   
   <link href="https://rolemee.com/"/>
-  <updated>2021-08-02T06:08:19.086Z</updated>
+  <updated>2021-09-16T01:09:41.323Z</updated>
   <id>https://rolemee.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ctfshow-web入门-PHP特性-109-115</title>
+    <link href="https://rolemee.com/2021/09/16/ctfshow-web-ru-men-php-te-xing-109-115/"/>
+    <id>https://rolemee.com/2021/09/16/ctfshow-web-ru-men-php-te-xing-109-115/</id>
+    <published>2021-09-16T01:09:26.000Z</published>
+    <updated>2021-09-16T01:09:41.323Z</updated>
+    
+    
+    
+    
+    <category term="ctfshow" scheme="https://rolemee.com/categories/ctfshow/"/>
+    
+    
+    <category term="WEB" scheme="https://rolemee.com/tags/WEB/"/>
+    
+    <category term="WEB入门" scheme="https://rolemee.com/tags/WEB%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>ctfshow-web入门-PHP特性-98-108</title>
