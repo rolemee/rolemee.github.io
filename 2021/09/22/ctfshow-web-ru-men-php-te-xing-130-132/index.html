@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Eakal,粟师傅yyds, 博客,ctf,web">
+    <meta name="keywords" content="ctfshow-web入门-PHP特性-130-132, 博客,ctf,web">
     <meta name="description" content="不会ACM，不会CTF，惨惨">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Eakal,粟师傅yyds | Rolemee的小破站</title>
+    <title>ctfshow-web入门-PHP特性-130-132 | Rolemee的小破站</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -324,12 +324,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Eakal,粟师傅yyds</h1>
+                    <h1 class="description center-align post-title">ctfshow-web入门-PHP特性-130-132</h1>
                 </div>
             </div>
         </div>
@@ -445,18 +445,27 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Typora/">
-                                <span class="chip bg-color">Typora</span>
+                            <a href="/tags/WEB/">
+                                <span class="chip bg-color">WEB</span>
                             </a>
                         
-                            <a href="/tags/Markdown/">
-                                <span class="chip bg-color">Markdown</span>
+                            <a href="/tags/WEB%E5%85%A5%E9%97%A8/">
+                                <span class="chip bg-color">WEB入门</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/ctfshow/" class="post-category">
+                                ctfshow
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -471,28 +480,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-12
+                    2021-09-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-13
+                    2021-09-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5
+                    518
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -510,8 +519,112 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Eakal-粟师傅"><a href="#Eakal-粟师傅" class="headerlink" title="Eakal ,粟师傅"></a>Eakal ,粟师傅</h1><h1 id="yyds"><a href="#yyds" class="headerlink" title="yyds"></a>yyds</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">!!!!!!!!!!!!!!!!!!!<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h2 id="web130"><a href="#web130" class="headerlink" title="web130"></a>web130</h2><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
 
+<span class="token comment">/*
+# -*- coding: utf-8 -*-
+# @Author: h1xa
+# @Date:   2020-10-13 11:25:09
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-10-13 05:19:40
+
+*/</span>
+
+
+<span class="token function">error_reporting</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">include</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"flag.php"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'f'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token variable">$f</span> <span class="token operator">=</span> <span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'f'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">preg_match</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/.+?ctfshow/is'</span><span class="token punctuation">,</span> <span class="token variable">$f</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'bye!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">stripos</span><span class="token punctuation">(</span><span class="token variable">$f</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'ctfshow'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token constant boolean">FALSE</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'bye!!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">echo</span> <span class="token variable">$flag</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">&#125;</span>
+</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>因为preg_match中的正则表达式写的是.+?，所以是ctfshow前面至少加一个东西才能匹配到，然后stripos返回的是一个int的类型，又由于是三个等于，不会进行类型转换，所以并不会进入，直接payload<code>f=ctfshow</code>。或者用数组绕过payload<code>f[]=1</code></p>
+<h2 id="web131"><a href="#web131" class="headerlink" title="web131"></a>web131</h2><pre class="line-numbers language-php+HTML" data-language="php+HTML"><code class="language-php+HTML">&lt;?php
+
+&#x2F;*
+# -*- coding: utf-8 -*-
+# @Author: h1xa
+# @Date:   2020-10-13 11:25:09
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-10-13 05:19:40
+
+*&#x2F;
+
+
+error_reporting(0);
+highlight_file(__FILE__);
+include(&quot;flag.php&quot;);
+if(isset($_POST[&#39;f&#39;]))&#123;
+    $f &#x3D; (String)$_POST[&#39;f&#39;];
+
+    if(preg_match(&#39;&#x2F;.+?ctfshow&#x2F;is&#39;, $f))&#123;
+        die(&#39;bye!&#39;);
+    &#125;
+    if(stripos($f,&#39;36Dctfshow&#39;) &#x3D;&#x3D;&#x3D; FALSE)&#123;
+        die(&#39;bye!!&#39;);
+    &#125;
+
+    echo $flag;
+
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p> 正则表达式是溢出 <a target="_blank" rel="noopener" href="https://www.laruence.com/2010/06/08/1579.html">https://www.laruence.com/2010/06/08/1579.html</a> 大概意思就是在php中正则表达式进行匹配有一定的限制，超过限制直接返回false</p>
+<p>大概有100w个字符就会溢出</p>
+<p>payload `&lt;?php</p>
+<p>$a = str_repeat(“show”,250000-2);</p>
+<p>$b = $a.’36Dctfshow’;</p>
+<p>echo $b;</p>
+<p>?&gt;`</p>
+<h2 id="web132"><a href="#web132" class="headerlink" title="web132"></a>web132</h2><pre class="line-numbers language-php+HTML" data-language="php+HTML"><code class="language-php+HTML">&lt;?php
+
+&#x2F;*
+# -*- coding: utf-8 -*-
+# @Author: h1xa
+# @Date:   2020-10-13 06:22:13
+# @Last Modified by:   h1xa
+# @Last Modified time: 2020-10-13 20:05:36
+# @email: h1xa@ctfer.com
+# @link: https:&#x2F;&#x2F;ctfer.com
+
+*&#x2F;
+
+#error_reporting(0);
+include(&quot;flag.php&quot;);
+highlight_file(__FILE__);
+
+
+if(isset($_GET[&#39;username&#39;]) &amp;&amp; isset($_GET[&#39;password&#39;]) &amp;&amp; isset($_GET[&#39;code&#39;]))&#123;
+    $username &#x3D; (String)$_GET[&#39;username&#39;];
+    $password &#x3D; (String)$_GET[&#39;password&#39;];
+    $code &#x3D; (String)$_GET[&#39;code&#39;];
+
+    if($code &#x3D;&#x3D;&#x3D; mt_rand(1,0x36D) &amp;&amp; $password &#x3D;&#x3D;&#x3D; $flag || $username &#x3D;&#x3D;&#x3D;&quot;admin&quot;)&#123;
+        
+        if($code &#x3D;&#x3D; &#39;admin&#39;)&#123;
+            echo $flag;
+        &#125;
+        
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>php中&amp;&amp;和||运算符应用 访问/robots.txt,之后访问/admin，获得源代码 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/hurry-up/p/10220082.html">https://www.cnblogs.com/hurry-up/p/10220082.html</a> 对于“与”（&amp;&amp;） 运算： x &amp;&amp; y 当x为false时，直接跳过，不执行y； 对于“或”（||） 运算 ： x||y 当x为true时，直接跳过，不执行y。</p>
+<p>所以payload<code>?username=admin&amp;password=1&amp;code=admin</code></p>
 
                 
             </div>
@@ -538,7 +651,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://rolemee.com/2021/07/12/eakal-yyds/">https://rolemee.com/2021/07/12/eakal-yyds/</a>
+                    <a href="https://rolemee.com/2021/09/22/ctfshow-web-ru-men-php-te-xing-130-132/">https://rolemee.com/2021/09/22/ctfshow-web-ru-men-php-te-xing-130-132/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -576,12 +689,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Typora/">
-                                    <span class="chip bg-color">Typora</span>
+                                <a href="/tags/WEB/">
+                                    <span class="chip bg-color">WEB</span>
                                 </a>
                             
-                                <a href="/tags/Markdown/">
-                                    <span class="chip bg-color">Markdown</span>
+                                <a href="/tags/WEB%E5%85%A5%E9%97%A8/">
+                                    <span class="chip bg-color">WEB入门</span>
                                 </a>
                             
                         </div>
@@ -753,17 +866,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/13/ctfshow-web-ru-men-xin-xi-sou-ji/">
+                <a href="/2021/09/22/ctfshow-web-ru-men-php-te-xing-130-132/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="ctfshow web入门 信息搜集">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="ctfshow-web入门-PHP特性-130-132">
                         
-                        <span class="card-title">ctfshow web入门 信息搜集</span>
+                        <span class="card-title">ctfshow-web入门-PHP特性-130-132</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -773,9 +887,63 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-13
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/ctfshow/" class="post-category">
+                                    ctfshow
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/WEB/">
+                        <span class="chip bg-color">WEB</span>
+                    </a>
+                    
+                    <a href="/tags/WEB%E5%85%A5%E9%97%A8/">
+                        <span class="chip bg-color">WEB入门</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/09/16/ctfshow-web-ru-men-php-te-xing-123-125-127/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="ctfshow-web入门-PHP特性-123,125-127">
+                        
+                        <span class="card-title">ctfshow-web入门-PHP特性-123,125-127</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            ctfshow web入门
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -797,56 +965,6 @@
                     
                     <a href="/tags/WEB%E5%85%A5%E9%97%A8/">
                         <span class="chip bg-color">WEB入门</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/12/eakal-yyds/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Eakal,粟师傅yyds">
-                        
-                        <span class="card-title">Eakal,粟师傅yyds</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            test000
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-12
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Rolemee
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
                     </a>
                     
                 </div>
