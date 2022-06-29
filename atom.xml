@@ -6,7 +6,7 @@
   <link href="https://rolemee.com/atom.xml" rel="self"/>
   
   <link href="https://rolemee.com/"/>
-  <updated>2022-06-22T09:54:10.240Z</updated>
+  <updated>2022-06-29T12:14:31.660Z</updated>
   <id>https://rolemee.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dest0g3_520迎新赛</title>
+    <link href="https://rolemee.com/2022/06/29/dest0g3-520-ying-xin-sai/"/>
+    <id>https://rolemee.com/2022/06/29/dest0g3-520-ying-xin-sai/</id>
+    <published>2022-06-29T12:14:01.000Z</published>
+    <updated>2022-06-29T12:14:31.660Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Dest0g3-520迎新赛&quot;&gt;&lt;a href=&quot;#Dest0g3-520迎新赛&quot; class=&quot;headerlink&quot; title=&quot;Dest0g3 520迎新赛&quot;&gt;&lt;/a&gt;Dest0g3 520迎新赛&lt;/h1&gt;&lt;h2 id=&quot;phpdest&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="补题" scheme="https://rolemee.com/categories/%E8%A1%A5%E9%A2%98/"/>
+    
+    
+    <category term="BUUOJ" scheme="https://rolemee.com/tags/BUUOJ/"/>
+    
+    <category term="补题" scheme="https://rolemee.com/tags/%E8%A1%A5%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>使用fastcoll生成字符串MD5碰撞及Exception类绕过md5、sha1</title>
@@ -526,34 +553,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;web58&quot;&gt;&lt;a href=&quot;#web58&quot; class=&quot;headerlink&quot; title=&quot;web58&quot;&gt;&lt;/a&gt;web58&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-php&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="ctfshow" scheme="https://rolemee.com/categories/ctfshow/"/>
-    
-    
-    <category term="WEB" scheme="https://rolemee.com/tags/WEB/"/>
-    
-    <category term="WEB入门" scheme="https://rolemee.com/tags/WEB%E5%85%A5%E9%97%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ctfshow-web入门-命令执行-55-57</title>
-    <link href="https://rolemee.com/2021/07/15/ctfshow-web-ru-men-ming-ling-zhi-xing-55-57/"/>
-    <id>https://rolemee.com/2021/07/15/ctfshow-web-ru-men-ming-ling-zhi-xing-55-57/</id>
-    <published>2021-07-15T13:34:47.000Z</published>
-    <updated>2021-07-15T13:37:13.069Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;web55&quot;&gt;&lt;a href=&quot;#web55&quot; class=&quot;headerlink&quot; title=&quot;web55&quot;&gt;&lt;/a&gt;web55&lt;/h2&gt;&lt;p&gt;源码&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-php&quot;</summary>
         
       
     
