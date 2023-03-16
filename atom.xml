@@ -6,7 +6,7 @@
   <link href="https://rolemee.com/atom.xml" rel="self"/>
   
   <link href="https://rolemee.com/"/>
-  <updated>2022-09-29T10:08:56.715Z</updated>
+  <updated>2023-03-16T10:26:36.376Z</updated>
   <id>https://rolemee.com/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python meilisearch的使用</title>
+    <link href="https://rolemee.com/2023/03/16/python-meilisearch-de-shi-yong/"/>
+    <id>https://rolemee.com/2023/03/16/python-meilisearch-de-shi-yong/</id>
+    <published>2023-03-16T10:25:22.000Z</published>
+    <updated>2023-03-16T10:26:36.376Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>DASCTF X CBCTF 2022九月挑战赛</title>
@@ -535,35 +548,6 @@
     <category term="WEB入门" scheme="https://rolemee.com/tags/WEB%E5%85%A5%E9%97%A8/"/>
     
     <category term="脚本" scheme="https://rolemee.com/tags/%E8%84%9A%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>web注意事项</title>
-    <link href="https://rolemee.com/2021/07/16/web-zhu-yi-shi-xiang/"/>
-    <id>https://rolemee.com/2021/07/16/web-zhu-yi-shi-xiang/</id>
-    <published>2021-07-16T08:39:51.000Z</published>
-    <updated>2021-07-16T08:40:31.174Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;web注意事项&quot;&gt;&lt;a href=&quot;#web注意事项&quot; class=&quot;headerlink&quot; title=&quot;web注意事项&quot;&gt;&lt;/a&gt;web注意事项&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="web学习笔记" scheme="https://rolemee.com/categories/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="WEB" scheme="https://rolemee.com/tags/WEB/"/>
-    
-    <category term="WEB注意事项" scheme="https://rolemee.com/tags/WEB%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
-    
-    <category term="学习笔记" scheme="https://rolemee.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
