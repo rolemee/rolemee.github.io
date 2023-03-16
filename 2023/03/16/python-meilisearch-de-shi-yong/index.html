@@ -443,12 +443,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/meilisearch/">
+                                <span class="chip bg-color">meilisearch</span>
+                            </a>
+                        
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
+                                <span class="chip bg-color">注意事项</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="post-category">
+                                注意事项
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -477,7 +498,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    163
                 </div>
                 
 
@@ -502,7 +523,40 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="python-meilisearch的使用"><a href="#python-meilisearch的使用" class="headerlink" title="python meilisearch的使用"></a>python meilisearch的使用</h1><h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip3 <span class="token function">install</span> meilisearch<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>下面是官方例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> meilisearch
+<span class="token keyword">import</span> json
+
+client <span class="token operator">=</span> meilisearch<span class="token punctuation">.</span>Client<span class="token punctuation">(</span><span class="token string">'http://localhost:7700'</span><span class="token punctuation">)</span>
+
+json_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'movies.json'</span><span class="token punctuation">)</span>
+movies <span class="token operator">=</span> json<span class="token punctuation">.</span>load<span class="token punctuation">(</span>json_file<span class="token punctuation">)</span>
+client<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token string">'movies'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>add_documents<span class="token punctuation">(</span>movies<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><h3 id="导入问题"><a href="#导入问题" class="headerlink" title="导入问题"></a>导入问题</h3><p>导入一定是需要id主键，如果需要自定义主键，需要自己设置</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">client<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token string">'movies'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>add_documents<span class="token punctuation">(</span>movies<span class="token punctuation">,</span>primary_key<span class="token operator">=</span><span class="token string">"UID"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>或者可以更新</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">client<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token string">'movies'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>update<span class="token punctuation">(</span>primary_key<span class="token operator">=</span><span class="token string">"ID"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>还可以自己设置一些其他的属性</p>
+<h3 id="其他属性"><a href="#其他属性" class="headerlink" title="其他属性"></a>其他属性</h3><p><code>update_searchable_attributes</code> 可以设置能够被搜索到的列</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">client<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token string">'movies'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>update_searchable_attributes<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><code>update_stop_words</code> 自定义停用词</p>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">client<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token string">'movies'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>update_stop_words<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'of'</span><span class="token punctuation">,</span> <span class="token string">'the'</span><span class="token punctuation">,</span> <span class="token string">'to'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><h3 id="自定义搜索"><a href="#自定义搜索" class="headerlink" title="自定义搜索"></a>自定义搜索</h3><p>自定义返回显示的内容</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">client<span class="token punctuation">.</span>search<span class="token punctuation">(</span>query_text<span class="token punctuation">,</span>attributes_to_retrieve<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -565,7 +619,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/meilisearch/">
+                                    <span class="chip bg-color">meilisearch</span>
+                                </a>
+                            
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
+                                    <span class="chip bg-color">注意事项</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -752,7 +818,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            使用注意事项
                         
                     </div>
                     <div class="publish-info">
@@ -761,13 +827,33 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Rolemee
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="post-category">
+                                    注意事项
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/meilisearch/">
+                        <span class="chip bg-color">meilisearch</span>
+                    </a>
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
+                        <span class="chip bg-color">注意事项</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1022,7 +1108,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">23.5k</span>
+                        class="white-color">23.7k</span>
             
             
             
